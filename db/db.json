@@ -1,0 +1,188 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "firstName": "Sebastian",
+      "lastName": "Eschweiler",
+      "weight": 80,
+      "country": 2,
+      "state": 2,
+      "birthday": "1999-11-05"
+    },
+    {
+      "id": 2,
+      "firstName": "Steve",
+      "lastName": "Palmer",
+      "weight": 80,
+      "country": 1,
+      "state": 1,
+      "birthday": "1999-12-05"
+    },
+    {
+      "id": 3,
+      "firstName": "Ann",
+      "lastName": "Smith",
+      "weight": 80,
+      "country": 1,
+      "state": 2,
+      "birthday": "1999-01-05"
+    },
+    {
+      "id": 4,
+      "firstName": "Joel",
+      "lastName": "Carneiro",
+      "weight": 80,
+      "country": 1,
+      "state": 1,
+      "birthday": "1995-02-05"
+    },
+    {
+      "firstName": "Joel",
+      "lastName": "Carneiro",
+      "weight": 77,
+      "birthday": "2004-01-01",
+      "country": 1,
+      "state": 2,
+      "id": 5
+    },
+    {
+      "firstName": "Some",
+      "lastName": "Example",
+      "weight": 898,
+      "birthday": "2004-01-02",
+      "country": 1,
+      "state": 1,
+      "id": 6
+    },
+    {
+      "firstName": "asd",
+      "lastName": "asd",
+      "weight": 23,
+      "birthday": "2004-01-02",
+      "country": 2,
+      "state": 1,
+      "id": 7
+    },
+    {
+      "firstName": "James",
+      "lastName": "Potter",
+      "weight": 80,
+      "birthday": "2000-11-15",
+      "country": 2,
+      "state": 1,
+      "id": 8
+    }
+  ],
+  "usersCountries": [
+    {
+      "id": 0,
+      "series": "Portugal",
+      "group": "Country",
+      "value": 20,
+      "color": "#cbbcf4"
+    },
+    {
+      "id": 1,
+      "series": "United Kingdom",
+      "group": "Country",
+      "value": 10,
+      "color": "#70db93"
+    },
+    {
+      "id": 2,
+      "series": "Spain",
+      "group": "Country",
+      "value": 5,
+      "color": "#10425c"
+    }
+  ],
+  "usersCountByAge": [
+    {
+      "id": 0,
+      "series": "0-18",
+      "group": "Age",
+      "value": 20,
+      "color": "#cbbcf4"
+    },
+    {
+      "id": 1,
+      "series": "19-50",
+      "group": "Age",
+      "value": 100,
+      "color": "#70db93"
+    },
+    {
+      "id": 2,
+      "series": ">50",
+      "group": "Age",
+      "value": 60,
+      "color": "#10425c"
+    }
+  ],
+  "books": [
+    {
+      "id": "0",
+      "title": "Reminders of Him",
+      "author": "Colleen Hoover",
+      "type": "Paperback",
+      "src": "https://images-na.ssl-images-amazon.com/images/I/41n9-p6-PpL._SX331_BO1,204,203,200_.jpg",
+      "rating": 5
+    },
+    {
+      "id": "1",
+      "title": "Maus I: A Survivor's Tale",
+      "author": "Art Spiegelman",
+      "type": "Paperback",
+      "src": "https://images-na.ssl-images-amazon.com/images/I/51R45cOV8UL._SX348_BO1,204,203,200_.jpg",
+      "rating": 2
+    },
+    {
+      "id": "2",
+      "title": "I Love You to the Moon and Back",
+      "author": "Amelia Hepworth",
+      "type": "Board book",
+      "src": "https://images-na.ssl-images-amazon.com/images/I/51p2SDOCV9L._SX482_BO1,204,203,200_.jpg",
+      "rating": 3
+    },
+    {
+      "id": "3",
+      "title": "Hardcover ",
+      "author": "James Patterson",
+      "type": "Hardcover ",
+      "src": "https://images-na.ssl-images-amazon.com/images/I/51lRyY9R4uL._SX337_BO1,204,203,200_.jpg",
+      "rating": 2
+    },
+    {
+      "id": "4",
+      "title": "Atomic Habits",
+      "author": "James Clear",
+      "type": "Hardcover ",
+      "src": "https://images-na.ssl-images-amazon.com/images/I/515mvgd0pXL._AC_SX184_.jpg",
+      "rating": 1
+    },
+    {
+      "id": "5",
+      "title": "The 48 Laws of Power",
+      "author": "Robert Greene",
+      "type": "Paperback ",
+      "src": "https://images-na.ssl-images-amazon.com/images/I/41KY-NORo9L._AC_SX184_.jpg",
+      "rating": 2
+    },
+    {
+      "id": "6",
+      "title": "How to Catch a Leprechaun",
+      "author": "Adam Wallace",
+      "type": "Hardcover ",
+      "src": "https://images-na.ssl-images-amazon.com/images/I/51jayVNubpL._AC_SX184_.jpg",
+      "rating": 4
+    },
+    {
+      "id": "7",
+      "title": "Where's Spot?",
+      "author": "Eric Hill",
+      "type": "Board book",
+      "src": "https://images-na.ssl-images-amazon.com/images/I/51o4b5AdNLL._AC_SX184_.jpg",
+      "rating": 3
+    }
+  ]
+}

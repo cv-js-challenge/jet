@@ -1,0 +1,85 @@
+{
+  "name": "custom-book",
+  "jetVersion": ">=11.1.0 <12.0.0",
+  "displayName": "Custom book",
+  "description": "A book element to display the book data",
+  "version": "11.1.0",
+  "properties": {
+    "bookId": {
+      "description": "The book's id",
+      "displayName": "Id",
+      "type": "string",
+      "required": true
+    },
+    "bookTitle": {
+      "description": "The book's title",
+      "displayName": "Title",
+      "type": "string",
+      "required": true
+    },
+    "author": {
+      "description": "The book's author",
+      "displayName": "Author",
+      "type": "string"
+    },
+    "type": {
+      "description": "The book's type",
+      "displayName": "Type",
+      "type": "string"
+    },
+    "heartColor": {
+      "description": "The book's heart color",
+      "displayName": "Heart Color",
+      "type": "ko.observable<string>"
+    },
+    "rating": {
+      "description": "The book's rating",
+      "displayName": "Rating",
+      "type": "number"
+    },
+    "src": {
+      "description": "The book's img source",
+      "displayName": "Src",
+      "type": "string",
+      "required": true
+    },
+    "clickCallback": {
+      "description": "The book's click callback to execute",
+      "displayName": "ClickCallback",
+      "type": "function"
+    }
+  },
+
+  "events": {
+    "bookClick": {
+      "description": "Triggered when a book is clicked and contains the value of the clicked book.",
+      "bubbles": true,
+      "detail": {
+        "value": {
+          "description": "The id of the book.",
+          "type": "string"
+        }
+      }
+    },
+    "addedToList": {
+      "description": "Triggered when an user add the book to a favorite list.",
+      "bubbles": true,
+      "detail": {
+        "value": {
+          "description": "The id of the book.",
+          "type": "string/number"
+        }
+      }
+    }
+  },
+  "methods": {
+    "changeHeartColor": {
+      "description": "Changes the color of the heart to the value that is given",
+      "params": [{ "name": "value", "description": "The heart color value to set", "type": "string" }]
+    },
+    "getHeartColor": {
+      "internalName": "_getHeartColor",
+      "description": "Returns the heart color"
+    }
+  }
+}

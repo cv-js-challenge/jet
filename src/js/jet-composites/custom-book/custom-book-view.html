@@ -1,0 +1,108 @@
+<!-- BOOK  -->
+<div on-click="[[onClick]]" :id="[['div-' + $properties.bookId]]"
+     class="oj-panel oj-panel-shadow-sm">
+    <!-- HEADERS  -->
+    <div
+         class="custom-height-200 oj-divider-bottom oj-divider-padding oj-flex oj-sm-align-items-center oj-sm-flex-items-initial oj-sm-justify-content-center">
+        <div
+             class="oj-flex oj-sm-flex-items-initial oj-sm-justify-content-center">
+            <div
+                 class="oj-sm-width-full oj-flex-item oj-sm-padding-2x-horizontal">
+                <oj-avatar class="oj-flex-item" role="img"
+                           size="xl" initials="B"
+                           src="[[$properties.src]]"
+                           aria-label="">
+                </oj-avatar>
+            </div>
+
+        </div>
+        <div
+             class="oj-sm-width-full oj-flex oj-sm-flex-items-initial oj-sm-justify-content-center">
+            <div
+                 class="oj-flex-item oj-sm-padding-2x-horizontal">
+                <span :title="[[bookTitle]]"
+                      class="oj-typography-subheading-sm oj-typography-semi-bold oj-line-clamp-1">
+                    <oj-bind-text value="[[bookTitle]]">
+                    </oj-bind-text>
+                </span>
+            </div>
+
+        </div>
+    </div>
+    <!-- HEADERS END -->
+
+    <!-- DESC  -->
+
+    <div
+         class="oj-sm-width-full oj-flex oj-divider-top oj-divider-padding oj-sm-align-items-center oj-sm-flex-items-initial oj-sm-justify-content-flex-start oj-sm-padding-4x-vertical">
+
+        <div
+             class="oj-flex oj-sm-flex-items-initial oj-sm-justify-content-space-between oj-sm-width-full">
+
+            <div
+                 class="oj-flex-item oj-sm-padding-1x-start oj-sm-width-full">
+                <div
+                     class="oj-flex-item oj-typography-subheading-sm oj-typography-semi-bold oj-text-color-secondary">
+                    <oj-bind-text
+                                  value="[[$properties.author]]">
+                    </oj-bind-text>
+                </div>
+
+                <div
+                     class="oj-flex-item oj-typography-body-sm oj-typography-semi-bold oj-text-color-">
+                    <oj-bind-text
+                                  value="[[$properties.type]]">
+                    </oj-bind-text>
+                </div>
+
+            </div>
+            <div
+                 class="oj-flex-item oj-flex oj-sm-align-items-center oj-sm-width-3/5">
+                <oj-rating-gauge style="height: 25px;"
+                                 value="[[$properties.rating]]"
+                                 step="0.5" readonly
+                                 size="small"
+                                 selected-state.color="#f8c15a"
+                                 changed-state.color="#f8c15a"
+                                 hover-state.color="#f8c15a"
+                                 unselected-state.color="#c4ced7">
+                </oj-rating-gauge>
+            </div>
+            <!-- buttons  -->
+            <div
+                 class="oj-flex-item oj-flex oj-sm-justify-content-flex-end oj-sm-width-2/5">
+
+                <oj-button class="oj-button-sm oj-sm-padding-2x-horizontal"
+                           on-oj-action="[[handleAddToList]]"
+                           display="icons">
+                    <span slot="startIcon"
+                          :style.color="[[heartColor]]"
+                          class="oj-ux-ico-heart-s"></span>
+                    <span>
+                        <oj-bind-text
+                                      value="[[addToListLabel]]">
+                        </oj-bind-text>
+                    </span>
+                </oj-button>
+
+                <oj-button class="oj-button-sm"
+                           chroming="callToAction"
+                           on-oj-action="[[handleAddToCart]]"
+                           display="icons">
+                    <span slot="startIcon"
+                          class="oj-ux-ico-cart-add"></span>
+                    <span>
+                        <oj-bind-text
+                                      value="[[addToCartLabel]]">
+                        </oj-bind-text>
+                    </span>
+
+                </oj-button>
+            </div>
+            <!-- buttons END -->
+        </div>
+    </div>
+    <!-- DESC END -->
+
+</div>
+<!-- BOOK  end -->

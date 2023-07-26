@@ -1,0 +1,27 @@
+<!--
+ Copyright (c) 2014, 2021, Oracle and/or its affiliates.
+ Licensed under The Universal Permissive License (UPL), Version 1.0
+ as shown at https://oss.oracle.com/licenses/upl/
+ -->
+<div class="oj-panel">
+  <h5><oj-bind-text value="[[usersDemoDataLabel]]"></oj-bind-text></h5>
+  <div
+       class="oj-flex oj-xl-justify-content-center oj-sm-margin-12x-bottom oj-panel">
+    <oj-conveyor-belt id="conveyorBelt" tabindex="0"
+                      class="oj-xl-12 oj-sm-12 oj-flex-item"
+                      data-oj-binding-provider="none">
+      <oj-bind-for-each data="[[modulesDataProvider]]">
+        <template data-oj-as="item">
+          <oj-module config="[[item.data.module]]">
+          </oj-module>
+        </template>
+        <template slot="noData">
+          <div
+               class="oj-typography-body-md oj-typography-bold oj-sm-padding-2x-top">
+            No Users data display</div>
+        </template>
+      </oj-bind-for-each>
+
+    </oj-conveyor-belt>
+  </div>
+</div>

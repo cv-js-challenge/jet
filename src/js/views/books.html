@@ -1,0 +1,63 @@
+<!--
+ Copyright (c) 2014, 2021, Oracle and/or its affiliates.
+ Licensed under The Universal Permissive License (UPL), Version 1.0
+ as shown at https://oss.oracle.com/licenses/upl/
+ -->
+<div class="oj-hybrid-padding">
+  <section>
+    <oj-bind-if test="[[isLoading]]">
+      <div
+           class="oj-flex oj-sm-flex-items-initial oj-sm-justify-content-center">
+        <div
+             class="oj-flex-item oj-sm-padding-2x-horizontal">
+          <oj-progress-circle id="progressCircle"
+                              value="-1">
+          </oj-progress-circle>
+        </div>
+      </div>
+    </oj-bind-if>
+    <div class="oj-flex">
+
+      <oj-bind-for-each data="[[booksDataProvider]]">
+        <template data-oj-as="item">
+          <div
+               class="oj-sm-4 oj-lg-3 oj-flex-item oj-sm-padding-2x-horizontal oj-sm-padding-2x-vertical">
+
+            <custom-book :id="[[item.data.id]]"
+                         book-id="[[item.data.id]]"
+                         book-title="[[item.data.title]]"
+                         author="[[item.data.author]]"
+                         type="[[item.data.type]]"
+                         on-book-click="[[bookClick]]"
+                         on-added-to-list="[[bookAddedToList]]"
+                         src="[[item.data.src]]"
+                         rating="[[item.data.rating]]"
+                         heart-color="[[item.data.heartColor]]">
+
+            </custom-book>
+
+          </div>
+        </template>
+        <template slot="noData">
+          <oj-bind-if test="[[!isLoading()]]">
+            <div
+                 class="oj-typography-body-md oj-typography-bold oj-sm-padding-2x-top">
+              No Users data display</div>
+
+          </oj-bind-if>
+
+        </template>
+      </oj-bind-for-each>
+
+    </div>
+
+  </section>
+
+</div>
+
+
+
+<!-- dialog  -->
+<oj-module config="[[favoritesDialog]]">
+</oj-module>
+<!-- dialog end -->
